@@ -2,16 +2,25 @@
 # with Go source code. If you know what GOPATH is then you probably
 # don't need to bother with make.
 
-.PHONY: geth android ios evm all test clean
+# 수정 시작 지점
+.PHONY: kpu android ios evm all test clean
+# .PHONY: geth android ios evm all test clean
+# 수정 종료 지점
 
 GOBIN = ./build/bin
 GO ?= latest
 GORUN = go run
 
-geth:
-	$(GORUN) build/ci.go install ./cmd/geth
+# 수정 시작 지점
+kpu:
+	$(GORUN) build/ci.go install ./cmd/kpu
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/geth\" to launch geth."
+	@echo "Run \"$(GOBIN)/kpu\" to launch kpu."
+# geth:
+# 	$(GORUN) build/ci.go install ./cmd/geth
+# 	@echo "Done building."
+# 	@echo "Run \"$(GOBIN)/geth\" to launch geth."
+# 수정 종료 지점
 
 all:
 	$(GORUN) build/ci.go install
