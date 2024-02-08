@@ -236,6 +236,10 @@ func ethFilter(args []string) (nodeFilter, error) {
 		filter = forkid.NewStaticFilter(params.SepoliaChainConfig, core.DefaultSepoliaGenesisBlock().ToBlock())
 	case "holesky":
 		filter = forkid.NewStaticFilter(params.HoleskyChainConfig, core.DefaultHoleskyGenesisBlock().ToBlock())
+	// 수정 시작 지점
+	// case "kpuniverse":
+	// 	filter = forkid.NewStaticFilter(params.KPUniverseChainConfig, core.DefaultKPUniverseGenesisBlock().ToBlock())
+	// 수정 종료 지점
 	default:
 		return nil, fmt.Errorf("unknown network %q", args[0])
 	}

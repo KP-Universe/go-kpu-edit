@@ -135,11 +135,18 @@ var (
 		Value:    ethconfig.Defaults.NetworkId,
 		Category: flags.EthCategory,
 	}
+	// 수정 시작 지점
 	MainnetFlag = &cli.BoolFlag{
 		Name:     "mainnet",
-		Usage:    "Ethereum mainnet",
+		Usage:    "KPUniverse mainnet",
 		Category: flags.EthCategory,
 	}
+	// MainnetFlag = &cli.BoolFlag{
+	// 	Name:     "mainnet",
+	// 	Usage:    "Ethereum mainnet",
+	// 	Category: flags.EthCategory,
+	// }
+	// 수정 종료 지점
 	GoerliFlag = &cli.BoolFlag{
 		Name:     "goerli",
 		Usage:    "Görli network: pre-configured proof-of-authority test network",

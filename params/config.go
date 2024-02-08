@@ -25,8 +25,11 @@ import (
 )
 
 // Genesis hashes to enforce below configs on.
-var ( // 수정 필요(첫 geth 실행 후)
-	MainnetGenesisHash = common.HexToHash("0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3")
+var (
+	// 수정 시작 지점(갱신 필요)
+	MainnetGenesisHash = common.HexToHash("0xc59c5c89e3d807258a6654f8c143eb807b57d2fe03b953ebdec05ca82888cea7")
+	// MainnetGenesisHash = common.HexToHash("0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3")
+	// 수정 종료 지점
 	HoleskyGenesisHash = common.HexToHash("0xb5f7f912443c940f21fd611f12828d75b534364ed9e95ca4e307729a4661bde4")
 	SepoliaGenesisHash = common.HexToHash("0x25a5cc106eea7138acab33231d7160d69cb777ee0c2c553fcddf5138993e6dd9")
 	GoerliGenesisHash  = common.HexToHash("0xbf7e331f7f7c1dd2e05159666b3bf8bc7a8a3a9eb1d518969eab529dd9b88c1a")
@@ -37,29 +40,55 @@ func newUint64(val uint64) *uint64 { return &val }
 var (
 	MainnetTerminalTotalDifficulty, _ = new(big.Int).SetString("58_750_000_000_000_000_000_000", 0)
 
+	// 수정 시작 지점
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
-	MainnetChainConfig = &ChainConfig{ // 수정 필요
-		ChainID:                       big.NewInt(1),
-		HomesteadBlock:                big.NewInt(1_150_000),
-		DAOForkBlock:                  big.NewInt(1_920_000),
+	MainnetChainConfig = &ChainConfig{
+		ChainID:                       big.NewInt(142536),
+		HomesteadBlock:                big.NewInt(0),
+		DAOForkBlock:                  nil,
 		DAOForkSupport:                true,
-		EIP150Block:                   big.NewInt(2_463_000),
-		EIP155Block:                   big.NewInt(2_675_000),
-		EIP158Block:                   big.NewInt(2_675_000),
-		ByzantiumBlock:                big.NewInt(4_370_000),
-		ConstantinopleBlock:           big.NewInt(7_280_000),
-		PetersburgBlock:               big.NewInt(7_280_000),
-		IstanbulBlock:                 big.NewInt(9_069_000),
-		MuirGlacierBlock:              big.NewInt(9_200_000),
-		BerlinBlock:                   big.NewInt(12_244_000),
-		LondonBlock:                   big.NewInt(12_965_000),
-		ArrowGlacierBlock:             big.NewInt(13_773_000),
-		GrayGlacierBlock:              big.NewInt(15_050_000),
-		TerminalTotalDifficulty:       MainnetTerminalTotalDifficulty, // 58_750_000_000_000_000_000_000
+		EIP150Block:                   big.NewInt(0),
+		EIP155Block:                   big.NewInt(0),
+		EIP158Block:                   big.NewInt(0),
+		ByzantiumBlock:                big.NewInt(0),
+		ConstantinopleBlock:           big.NewInt(0),
+		PetersburgBlock:               big.NewInt(0),
+		IstanbulBlock:                 big.NewInt(0),
+		MuirGlacierBlock:              big.NewInt(0),
+		BerlinBlock:                   big.NewInt(0),
+		LondonBlock:                   big.NewInt(0),
+		ArrowGlacierBlock:             big.NewInt(0),
+		GrayGlacierBlock:              big.NewInt(0),
+		TerminalTotalDifficulty:       big.NewInt(0),
 		TerminalTotalDifficultyPassed: true,
-		ShanghaiTime:                  newUint64(1681338455),
+		MergeNetsplitBlock:            nil,
+		ShanghaiTime:                  newUint64(1707288397), // 갱신 필요
 		Ethash:                        new(EthashConfig),
 	}
+	// MainnetChainConfig is the chain parameters to run a node on the main network.
+	// MainnetChainConfig = &ChainConfig{ // 수정 필요
+	// 	ChainID:                       big.NewInt(1),
+	// 	HomesteadBlock:                big.NewInt(1_150_000),
+	// 	DAOForkBlock:                  big.NewInt(1_920_000),
+	// 	DAOForkSupport:                true,
+	// 	EIP150Block:                   big.NewInt(2_463_000),
+	// 	EIP155Block:                   big.NewInt(2_675_000),
+	// 	EIP158Block:                   big.NewInt(2_675_000),
+	// 	ByzantiumBlock:                big.NewInt(4_370_000),
+	// 	ConstantinopleBlock:           big.NewInt(7_280_000),
+	// 	PetersburgBlock:               big.NewInt(7_280_000),
+	// 	IstanbulBlock:                 big.NewInt(9_069_000),
+	// 	MuirGlacierBlock:              big.NewInt(9_200_000),
+	// 	BerlinBlock:                   big.NewInt(12_244_000),
+	// 	LondonBlock:                   big.NewInt(12_965_000),
+	// 	ArrowGlacierBlock:             big.NewInt(13_773_000),
+	// 	GrayGlacierBlock:              big.NewInt(15_050_000),
+	// 	TerminalTotalDifficulty:       MainnetTerminalTotalDifficulty, // 58_750_000_000_000_000_000_000
+	// 	TerminalTotalDifficultyPassed: true,
+	// 	ShanghaiTime:                  newUint64(1681338455),
+	// 	Ethash:                        new(EthashConfig),
+	// }
+	// 수정 종료 지점
 	// HoleskyChainConfig contains the chain parameters to run a node on the Holesky test network.
 	HoleskyChainConfig = &ChainConfig{
 		ChainID:                       big.NewInt(17000),
@@ -314,6 +343,7 @@ var NetworkNames = map[string]string{
 	GoerliChainConfig.ChainID.String():  "goerli",
 	SepoliaChainConfig.ChainID.String(): "sepolia",
 	HoleskyChainConfig.ChainID.String(): "holesky",
+	// KPUniverseChainConfig.ChainID.String(): "kpuniverse",
 }
 
 // ChainConfig is the core config which determines the blockchain settings.

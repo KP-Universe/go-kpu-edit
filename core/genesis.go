@@ -531,6 +531,7 @@ func (g *Genesis) MustCommit(db ethdb.Database, triedb *trie.Database) *types.Bl
 	return block
 }
 
+// 수정 필요(하지만 allocdata 어떤 식으로 저장되어 있는지 감이 안옴)
 // DefaultGenesisBlock returns the Ethereum main net genesis block.
 func DefaultGenesisBlock() *Genesis {
 	return &Genesis{
@@ -579,6 +580,20 @@ func DefaultHoleskyGenesisBlock() *Genesis {
 		Alloc:      decodePrealloc(holeskyAllocData),
 	}
 }
+
+// 수정 시작 지점
+// DefaultKPUniverseGenesisBlock returns the KPUniverse network genesis block.
+// func DefaultKPUniverseGenesisBlock() *Genesis {
+// 	return &Genesis{
+// 		Config:     params.KPUniverseChainConfig,
+// 		Nonce:      0, // 뭔지 모름
+// 		GasLimit:   0x17d7840,
+// 		Difficulty: big.NewInt(0x01),
+// 		Timestamp:  1706689319, // 갱신 필요
+// 		Alloc:      decodePrealloc(kpuniverseAllocData),
+// 	}
+// }
+// 수정 종료 지점
 
 // DeveloperGenesisBlock returns the 'geth --dev' genesis block.
 func DeveloperGenesisBlock(gasLimit uint64, faucet *common.Address) *Genesis {
