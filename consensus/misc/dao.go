@@ -21,9 +21,9 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/KP-Universe/go-kpu/core/state"
+	"github.com/KP-Universe/go-kpu/core/types"
+	"github.com/KP-Universe/go-kpu/params"
 	"github.com/holiman/uint256"
 )
 

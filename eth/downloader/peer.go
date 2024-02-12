@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/msgrate"
+	"github.com/KP-Universe/go-kpu/common"
+	"github.com/KP-Universe/go-kpu/eth/protocols/eth"
+	"github.com/KP-Universe/go-kpu/event"
+	"github.com/KP-Universe/go-kpu/log"
+	"github.com/KP-Universe/go-kpu/p2p/msgrate"
 )
 
 const (

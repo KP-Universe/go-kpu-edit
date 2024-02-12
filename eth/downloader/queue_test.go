@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/KP-Universe/go-kpu/common"
+	"github.com/KP-Universe/go-kpu/consensus/ethash"
+	"github.com/KP-Universe/go-kpu/core"
+	"github.com/KP-Universe/go-kpu/core/types"
+	"github.com/KP-Universe/go-kpu/log"
+	"github.com/KP-Universe/go-kpu/params"
+	"github.com/KP-Universe/go-kpu/trie"
 	"golang.org/x/exp/slog"
 )
 

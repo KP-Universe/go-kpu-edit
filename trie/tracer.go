@@ -17,7 +17,7 @@
 package trie
 
 import (
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/KP-Universe/go-kpu/common"
 )
 
 // tracer tracks the changes of trie nodes. During the trie operations,

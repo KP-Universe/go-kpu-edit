@@ -19,9 +19,9 @@ package ethapi
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/KP-Universe/go-kpu/accounts/abi"
+	"github.com/KP-Universe/go-kpu/common/hexutil"
+	"github.com/KP-Universe/go-kpu/core/vm"
 )
 
 // revertError is an API error that encompasses an EVM revert with JSON error

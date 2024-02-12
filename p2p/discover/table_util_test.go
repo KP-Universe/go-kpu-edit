@@ -26,9 +26,9 @@ import (
 	"net"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
+	"github.com/KP-Universe/go-kpu/crypto"
+	"github.com/KP-Universe/go-kpu/p2p/enode"
+	"github.com/KP-Universe/go-kpu/p2p/enr"
 	"golang.org/x/exp/slices"
 )
 

@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/beacon/params"
-	"github.com/ethereum/go-ethereum/beacon/types"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
+	"github.com/KP-Universe/go-kpu/beacon/params"
+	"github.com/KP-Universe/go-kpu/beacon/types"
+	"github.com/KP-Universe/go-kpu/common/mclock"
+	"github.com/KP-Universe/go-kpu/ethdb/memorydb"
 )
 
 var (

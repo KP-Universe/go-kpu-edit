@@ -19,19 +19,19 @@ package simulated
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/catalyst"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/KP-Universe/go-kpu"
+	"github.com/KP-Universe/go-kpu/common"
+	"github.com/KP-Universe/go-kpu/core"
+	"github.com/KP-Universe/go-kpu/eth"
+	"github.com/KP-Universe/go-kpu/eth/catalyst"
+	"github.com/KP-Universe/go-kpu/eth/downloader"
+	"github.com/KP-Universe/go-kpu/eth/ethconfig"
+	"github.com/KP-Universe/go-kpu/eth/filters"
+	"github.com/KP-Universe/go-kpu/ethclient"
+	"github.com/KP-Universe/go-kpu/node"
+	"github.com/KP-Universe/go-kpu/p2p"
+	"github.com/KP-Universe/go-kpu/params"
+	"github.com/KP-Universe/go-kpu/rpc"
 )
 
 // Client exposes the methods provided by the Ethereum RPC client.

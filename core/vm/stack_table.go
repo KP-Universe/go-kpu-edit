@@ -17,7 +17,7 @@
 package vm
 
 import (
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/KP-Universe/go-kpu/params"
 )
 
 func minSwapStack(n int) int {

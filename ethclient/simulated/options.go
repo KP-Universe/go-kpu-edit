@@ -17,8 +17,8 @@
 package simulated
 
 import (
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/KP-Universe/go-kpu/eth/ethconfig"
+	"github.com/KP-Universe/go-kpu/node"
 )
 
 // WithBlockGasLimit configures the simulated backend to target a specific gas limit

@@ -16,7 +16,7 @@
 
 package params
 
-import "github.com/ethereum/go-ethereum/common"
+import "github.com/KP-Universe/go-kpu/common"
 
 // MainnetBootnodes are the enode URLs of the P2P bootstrap nodes running on
 // 수정 시작 지점

@@ -5,13 +5,13 @@ package ethconfig
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/txpool/blobpool"
-	"github.com/ethereum/go-ethereum/core/txpool/legacypool"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/miner"
+	"github.com/KP-Universe/go-kpu/common"
+	"github.com/KP-Universe/go-kpu/core"
+	"github.com/KP-Universe/go-kpu/core/txpool/blobpool"
+	"github.com/KP-Universe/go-kpu/core/txpool/legacypool"
+	"github.com/KP-Universe/go-kpu/eth/downloader"
+	"github.com/KP-Universe/go-kpu/eth/gasprice"
+	"github.com/KP-Universe/go-kpu/miner"
 )
 
 // MarshalTOML marshals as TOML.

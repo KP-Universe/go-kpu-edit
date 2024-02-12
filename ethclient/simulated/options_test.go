@@ -22,9 +22,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/KP-Universe/go-kpu"
+	"github.com/KP-Universe/go-kpu/core"
+	"github.com/KP-Universe/go-kpu/params"
 )
 
 // Tests that the simulator starts with the initial gas limit in the genesis block,
